@@ -60,12 +60,16 @@
   {
     "name": "hierarchy",
     "route": "#hierarchy",
-    "tags": ["route", "legacy"]
+    "tags": ["route", "legacy"],
+    "approved": "APPROVED CHANGE (VPAT 2.1.1 Keyboard): an opened dialog takes the focus",
+    "expect_new": {"focus": "#hy_box"}
   },
   {
     "name": "polyhedra",
     "route": "#polyhedra",
-    "tags": ["route", "legacy"]
+    "tags": ["route", "legacy"],
+    "approved": "APPROVED CHANGE (VPAT 2.1.1 Keyboard): an opened dialog takes the focus",
+    "expect_new": {"focus": "#all_polyhedra_box"}
   },
   {
     "name": "modal_login",
@@ -87,13 +91,17 @@
       {"wait_for": "#databrowser div.gallery_item, #databrowser tr.tcell"},
       {"click": "#advsearch_init_trigger"}
     ],
-    "tags": ["click", "legacy"]
+    "tags": ["click", "legacy"],
+    "approved": "APPROVED CHANGE (VPAT 2.1.1 Keyboard): an opened dialog takes the focus",
+    "expect_new": {"focus": "#advsbox"}
   },
   {
     "name": "click_entry_ctx",
     "route": "#inquiry/formulae=Ag2O&props=crystal%20structure",
     "steps": [{"wait_for": "#databrowser tr.tcell"}, {"click": "#databrowser tr.tcell"}],
-    "tags": ["click", "legacy"]
+    "tags": ["click", "legacy"],
+    "approved": "APPROVED CHANGE (VPAT 2.1.1 Keyboard): the clicked control is focusable now and keeps the focus, like a native button",
+    "expect_new": {"focus": "#e__S311308"}
   },
   {
     "name": "click_sort",
@@ -610,7 +618,9 @@
       {"click": "#dataheader_phases th.header"}
     ],
     "probe": ["classes:#dataheader_phases th", "attrs:#databrowser tr@id"],
-    "tags": ["sort"]
+    "tags": ["sort"],
+    "approved": "APPROVED CHANGE (VPAT 2.1.1 Keyboard): the clicked control is focusable now and keeps the focus, like a native button",
+    "expect_new": {"focus": "#control_c"}
   },
   {
     "comment": "section: periodic table",
@@ -622,7 +632,9 @@
       "classes:#ptable_area li[data-pos='47'], #ptable_area li[data-pos='8']",
       "visible:#ptable_results"
     ],
-    "tags": ["ptable", "mouse"]
+    "tags": ["ptable", "mouse"],
+    "approved": "APPROVED CHANGE (VPAT 2.1.1 Keyboard): the clicked control is focusable now and keeps the focus, like a native button",
+    "expect_new": {"focus": "#ptable_area > ul > li.cat_0.selected_a.type_6"}
   },
   {
     "name": "ptable_click_binary",
@@ -637,7 +649,9 @@
       "visible:#ptable_results",
       "visible:#ptable_vis"
     ],
-    "tags": ["ptable", "mouse"]
+    "tags": ["ptable", "mouse"],
+    "approved": "APPROVED CHANGE (VPAT 2.1.1 Keyboard): the clicked control is focusable now and keeps the focus, like a native button",
+    "expect_new": {"focus": "#ptable_area > ul > li.active_a.selected_b"}
   },
   {
     "name": "ptable_click_toggle_off",
@@ -648,7 +662,9 @@
       {"click": "#ptable_area li[data-pos='47']", "after": 1500}
     ],
     "probe": ["classes:#ptable_area li[data-pos='47']"],
-    "tags": ["ptable", "mouse"]
+    "tags": ["ptable", "mouse"],
+    "approved": "APPROVED CHANGE (VPAT 2.1.1 Keyboard): the clicked control is focusable now and keeps the focus, like a native button",
+    "expect_new": {"focus": "#ptable_area > ul > li.cat_0.type_6"}
   },
   {
     "name": "ptable_remove_item_deselects",
@@ -694,7 +710,9 @@
     "steps": [{"click": "#ptable_area li[data-pos='47']", "after": 1500}, {"scroll_y": 300, "after": 1000}],
     "probe": ["class:#ptable_dtypes_box", "style:#legend@display", "class:#ptable_vis", "scroll"],
     "viewport": [1280, 800],
-    "tags": ["ptable", "scroll"]
+    "tags": ["ptable", "scroll"],
+    "approved": "APPROVED CHANGE (VPAT 2.1.1 Keyboard): the clicked control is focusable now and keeps the focus, like a native button",
+    "expect_new": {"focus": "#ptable_area > ul > li.cat_0.selected_a.type_6"}
   },
   {
     "name": "ptable_route_selects",
@@ -710,7 +728,9 @@
     "route": "#start",
     "steps": [{"click": "#advsearch_init_trigger"}],
     "probe": ["visibles:div.advstab", "classes:#advstab_options li", "visible:#advsbox"],
-    "tags": ["advsearch"]
+    "tags": ["advsearch"],
+    "approved": "APPROVED CHANGE (VPAT 2.1.1 Keyboard): an opened dialog takes the focus",
+    "expect_new": {"focus": "#advsbox"}
   },
   {
     "name": "advs_switch_tabs",
@@ -721,7 +741,9 @@
       {"click": "#advstab_options li[rev=advstab_bib]"}
     ],
     "probe": ["visibles:div.advstab", "classes:#advstab_options li"],
-    "tags": ["advsearch"]
+    "tags": ["advsearch"],
+    "approved": "APPROVED CHANGE (VPAT 2.1.1 Keyboard): the clicked control is focusable now and keeps the focus, like a native button",
+    "expect_new": {"focus": "#advstab_options > li.working"}
   },
   {
     "name": "advs_legend_fills_input",
@@ -756,7 +778,9 @@
       {"fill": "#advs_fct_formulae", "text": "Ag2O"},
       {"click": "#advsearch_do_trigger", "after": 1500}
     ],
-    "tags": ["advsearch", "search"]
+    "tags": ["advsearch", "search"],
+    "approved": "APPROVED CHANGE (VPAT 2.1.1 Keyboard): closing a dialog returns the focus to the control that opened it",
+    "expect_new": {"focus": "#advsearch_init_trigger"}
   },
   {
     "name": "advs_submit_enter",
@@ -768,13 +792,17 @@
       {"type": "#advs_fct_elements", "text": "Ag, O"},
       {"key": "Enter", "after": 1500}
     ],
-    "tags": ["advsearch", "keyboard"]
+    "tags": ["advsearch", "keyboard"],
+    "approved": "APPROVED CHANGE (VPAT 2.1.1 Keyboard): closing a dialog returns the focus to the control that opened it",
+    "expect_new": {"focus": "#advsearch_init_trigger"}
   },
   {
     "name": "advs_submit_empty",
     "route": "#start",
     "steps": [{"click": "#advsearch_init_trigger"}, {"click": "#advsearch_do_trigger"}],
-    "tags": ["advsearch", "notify"]
+    "tags": ["advsearch", "notify"],
+    "approved": "APPROVED CHANGE (VPAT 2.1.1 Keyboard): the clicked control is focusable now and keeps the focus, like a native button",
+    "expect_new": {"focus": "#advsearch_do_trigger"}
   },
   {
     "name": "advs_doi_normalized",
@@ -786,7 +814,9 @@
       {"fill": "#advs_fct_doi", "text": "http://dx.doi.org/10.1103/PhysRevB.25.5150"},
       {"click": "#advsearch_do_trigger", "after": 1500}
     ],
-    "tags": ["advsearch", "search"]
+    "tags": ["advsearch", "search"],
+    "approved": "APPROVED CHANGE (VPAT 2.1.1 Keyboard): closing a dialog returns the focus to the control that opened it",
+    "expect_new": {"focus": "#advsearch_init_trigger"}
   },
   {
     "name": "advs_drop_clears",
@@ -799,13 +829,17 @@
       {"click": "#advsearch_drop_trigger"}
     ],
     "probe": ["values:input.advs_input", "texts:#advsbox .selectize-input > div[data-term]"],
-    "tags": ["advsearch"]
+    "tags": ["advsearch"],
+    "approved": "APPROVED CHANGE (VPAT 2.1.1 Keyboard): the clicked control is focusable now and keeps the focus, like a native button",
+    "expect_new": {"focus": "#advsearch_drop_trigger"}
   },
   {
     "name": "advs_close_cross",
     "route": "#start",
     "steps": [{"click": "#advsearch_init_trigger"}, {"click": "#advstab_cry div.close_advs_dialogue"}],
-    "tags": ["advsearch", "mouse"]
+    "tags": ["advsearch", "mouse"],
+    "approved": "APPROVED CHANGE (VPAT 2.1.1 Keyboard): closing a dialog returns the focus to the control that opened it",
+    "expect_new": {"focus": "#advsearch_init_trigger"}
   },
   {
     "name": "advs_escape_closes",
@@ -842,7 +876,9 @@
       "texts:#advstab_main .selectize-input > div[data-term]",
       "visible:#advstab_main .selectize-dropdown"
     ],
-    "tags": ["advsearch", "multiselect", "keyboard"]
+    "tags": ["advsearch", "multiselect", "keyboard"],
+    "approved": "APPROVED CHANGE (VPAT 2.1.1 Keyboard): closing a dialog returns the focus to the control that opened it",
+    "expect_new": {"focus": "#advsearch_init_trigger"}
   },
   {
     "name": "advs_props_autocomplete",
@@ -871,7 +907,23 @@
       {"key": "Enter", "after": 1500}
     ],
     "probe": ["value:#advs_fct_props", "visibles:div.autocomplete-suggestions"],
-    "tags": ["advsearch", "autocomplete", "keyboard"]
+    "tags": ["advsearch", "autocomplete", "keyboard"],
+    "approved": "APPROVED CHANGE (VPAT 2.1.1 Keyboard): closing a dialog returns the focus to the control that opened it",
+    "expect_new": {"focus": "#advsearch_init_trigger"}
+  },
+  {
+    "name": "advs_props_autocomplete_click",
+    "desc": "a property suggestion is picked with the mouse (the suggestions live in <body>, outside the dialog)",
+    "route": "#start",
+    "steps": [
+      {"click": "#advsearch_init_trigger"},
+      {"click": "#advstab_options li[rev=advstab_main]"},
+      {"type": "#advs_fct_props", "text": "band", "after": 1000},
+      {"click": "div.autocomplete-suggestions div.autocomplete-suggestion", "nth": 1, "after": 1500}
+    ],
+    "probe": ["value:#advs_fct_props", "visibles:div.autocomplete-suggestions"],
+    "expect": {"value:#advs_fct_props": {"contains": "band"}},
+    "tags": ["advsearch", "autocomplete"]
   },
   {
     "name": "advs_aet_limit",
@@ -894,7 +946,9 @@
       {"click": "#all_polyhedra_content div.gallery_item", "nth": 5, "after": 1500}
     ],
     "probe": ["texts:#advstab_cry .selectize-input > div[data-term]", "visible:#aetmap", "visible:#advsbox"],
-    "tags": ["advsearch", "polyhedra"]
+    "tags": ["advsearch", "polyhedra"],
+    "approved": "APPROVED CHANGE (VPAT 2.1.1 Keyboard): an opened dialog takes the focus",
+    "expect_new": {"focus": "#advsbox"}
   },
   {
     "name": "interpret_click_opens_advsearch",
@@ -903,7 +957,9 @@
     "route": "#inquiry/formulae=Ag2O&props=crystal%20structure",
     "steps": [{"wait_for": "#interpret li"}, {"click": "#interpret li"}],
     "probe": ["visibles:div.advstab", "classes:#advstab_options li"],
-    "tags": ["advsearch", "results"]
+    "tags": ["advsearch", "results"],
+    "approved": "APPROVED CHANGE (VPAT 2.1.1 Keyboard): an opened dialog takes the focus",
+    "expect_new": {"focus": "#advsbox"}
   },
   {
     "comment": "section: modals, user box, keyboard",
@@ -919,7 +975,9 @@
     "route": "#search/Ag-O",
     "steps": [{"click": "#userbox", "after": 1000}, {"click": "#userbox", "after": 1500}],
     "probe": ["visible:#loginbox"],
-    "tags": ["modal", "mouse"]
+    "tags": ["modal", "mouse"],
+    "approved": "APPROVED CHANGE (VPAT 2.1.1 Keyboard): the clicked control is focusable now and keeps the focus, like a native button",
+    "expect_new": {"focus": "#userbox"}
   },
   {
     "name": "login_escape_closes",
@@ -976,7 +1034,9 @@
       {"click": "#login_trigger", "after": 1500}
     ],
     "probe": ["text:#login_trigger", "visible:#loginbox", "value:#login_password"],
-    "tags": ["modal", "mock"]
+    "tags": ["modal", "mock"],
+    "approved": "APPROVED CHANGE (VPAT 2.1.1 Keyboard): the clicked control is focusable now and keeps the focus, like a native button",
+    "expect_new": {"focus": "#login_trigger"}
   },
   {
     "name": "login_network_error",
@@ -989,7 +1049,9 @@
       {"click": "#login_trigger", "after": 1500}
     ],
     "probe": ["text:#login_trigger", "visible:#loginbox"],
-    "tags": ["modal", "mock"]
+    "tags": ["modal", "mock"],
+    "approved": "APPROVED CHANGE (VPAT 2.1.1 Keyboard): the clicked control is focusable now and keeps the focus, like a native button",
+    "expect_new": {"focus": "#login_trigger"}
   },
   {
     "name": "factor_digits_advance",
@@ -1014,7 +1076,9 @@
     "steps": [{"click": "#darkmode_trigger", "after": 1000}],
     "probe": ["text:#darkmode_trigger", "class:body", "storage:darkmode"],
     "pixels": "loose",
-    "tags": ["darkmode", "mouse"]
+    "tags": ["darkmode", "mouse"],
+    "approved": "APPROVED CHANGE (VPAT 2.1.1 Keyboard): the clicked control is focusable now and keeps the focus, like a native button",
+    "expect_new": {"focus": "#darkmode_trigger"}
   },
   {
     "comment": "section: hierarchy and numeric search",
@@ -1022,7 +1086,9 @@
     "route": "#hierarchy",
     "steps": [{"click": "#hy_options > li[rev=hy_complex]"}],
     "probe": ["visibles:div.hy_tabs", "classes:#hy_options > li"],
-    "tags": ["hierarchy"]
+    "tags": ["hierarchy"],
+    "approved": "APPROVED CHANGE (VPAT 2.1.1 Keyboard): the clicked control is focusable now and keeps the focus, like a native button",
+    "expect_new": {"focus": "#hy_options > li.working"}
   },
   {
     "name": "hy_expand",
@@ -1030,7 +1096,9 @@
     "route": "#hierarchy",
     "steps": [{"click": "#hy_scalars li > span"}],
     "probe": ["texts:#hy_scalars li > span", "nvisible:#hy_scalars ul ul"],
-    "tags": ["hierarchy"]
+    "tags": ["hierarchy"],
+    "approved": "APPROVED CHANGE (VPAT 2.1.1 Keyboard): the clicked control is focusable now and keeps the focus, like a native button",
+    "expect_new": {"focus": "#hy_scalars > ul > li > span.hy1"}
   },
   {
     "name": "hy_dynprop",
@@ -1053,7 +1121,9 @@
       "texts:#numericbox div.slider_numerics",
       "html:#numericbox ul"
     ],
-    "tags": ["advsearch", "numeric", "slider"]
+    "tags": ["advsearch", "numeric", "slider"],
+    "approved": "APPROVED CHANGE (VPAT 2.1.1 Keyboard): the clicked control is focusable now and keeps the focus, like a native button",
+    "expect_new": {"focus": "#crtab > div > strong.numeric"}
   },
   {
     "name": "hy_numeric_three_sliders_warns",
@@ -1066,7 +1136,9 @@
       {"click": "#advstab_cry strong.numeric[rel=clat]", "after": 600}
     ],
     "probe": ["count:#numericbox div.slider_numerics"],
-    "tags": ["advsearch", "numeric", "notify"]
+    "tags": ["advsearch", "numeric", "notify"],
+    "approved": "APPROVED CHANGE (VPAT 2.1.1 Keyboard): the clicked control is focusable now and keeps the focus, like a native button",
+    "expect_new": {"focus": "#crtab > div > strong.numeric"}
   },
   {
     "name": "numeric_submit",
@@ -1077,7 +1149,9 @@
       {"click": "#advstab_cry strong.numeric[rel=alat]", "after": 1000},
       {"click": "#numericbox_do_trigger", "after": 2000}
     ],
-    "tags": ["numeric", "search"]
+    "tags": ["numeric", "search"],
+    "approved": "APPROVED CHANGE (VPAT 2.1.1 Keyboard): the clicked control is focusable now and keeps the focus, like a native button",
+    "expect_new": {"focus": "#numericbox_do_trigger"}
   },
   {
     "name": "numeric_drop",
@@ -1088,7 +1162,9 @@
       {"click": "#numericbox_drop_trigger", "after": 1000}
     ],
     "probe": ["visible:#numericbox", "count:#numericbox div.slider_numerics"],
-    "tags": ["numeric"]
+    "tags": ["numeric"],
+    "approved": "APPROVED CHANGE (VPAT 2.1.1 Keyboard): the clicked control is focusable now and keeps the focus, like a native button",
+    "expect_new": {"focus": "#numericbox_drop_trigger"}
   },
   {
     "name": "numeric_close",
@@ -1099,7 +1175,9 @@
       {"click": "#close_numericbox", "after": 1000}
     ],
     "probe": ["visible:#numericbox", "count:#numericbox div.slider_numerics"],
-    "tags": ["numeric"]
+    "tags": ["numeric"],
+    "approved": "APPROVED CHANGE (VPAT 2.1.1 Keyboard): closing the sliders returns the focus to the numeric control that opened them",
+    "expect_new": {"focus": "#crtab > div > strong.numeric"}
   },
   {
     "name": "numeric_route_slider_values",
@@ -1150,7 +1228,9 @@
     "route": "#inquiry/elements=Ag-O&classes=oxide",
     "steps": [{"wait_for": "#control_b"}, {"click": "#control_b", "after": 1500}],
     "probe": ["classes:div.controlswitch > div"],
-    "tags": ["results", "controls"]
+    "tags": ["results", "controls"],
+    "approved": "APPROVED CHANGE (VPAT 2.1.1 Keyboard): the clicked control is focusable now and keeps the focus, like a native button",
+    "expect_new": {"focus": "#control_b"}
   },
   {
     "name": "control_articles",
@@ -1158,7 +1238,9 @@
     "route": "#inquiry/elements=Ag-O&classes=oxide",
     "steps": [{"wait_for": "#control_f"}, {"click": "#control_f", "after": 1500}],
     "probe": ["classes:div.controlswitch > div"],
-    "tags": ["results", "controls"]
+    "tags": ["results", "controls"],
+    "approved": "APPROVED CHANGE (VPAT 2.1.1 Keyboard): the clicked control is focusable now and keeps the focus, like a native button",
+    "expect_new": {"focus": "#control_f"}
   },
   {
     "name": "control_table_to_previews",
@@ -1170,7 +1252,9 @@
       "count:#databrowser div.gallery_item",
       "count:#databrowser tr.tcell"
     ],
-    "tags": ["results", "controls"]
+    "tags": ["results", "controls"],
+    "approved": "APPROVED CHANGE (VPAT 2.1.1 Keyboard): the clicked control is focusable now and keeps the focus, like a native button",
+    "expect_new": {"focus": "#control_d"}
   },
   {
     "name": "control_previews_to_table",
@@ -1182,7 +1266,9 @@
       "count:#databrowser div.gallery_item",
       "count:#databrowser tr.tcell"
     ],
-    "tags": ["results", "controls"]
+    "tags": ["results", "controls"],
+    "approved": "APPROVED CHANGE (VPAT 2.1.1 Keyboard): the clicked control is focusable now and keeps the focus, like a native button",
+    "expect_new": {"focus": "#control_c"}
   },
   {
     "name": "control_plots",
@@ -1191,7 +1277,9 @@
     "route": "#inquiry/elements=Ag-O&classes=oxide",
     "steps": [{"wait_for": "#control_e"}, {"click": "#control_e", "after": 2500}],
     "pixels": "loose",
-    "tags": ["results", "controls", "plot"]
+    "tags": ["results", "controls", "plot"],
+    "approved": "APPROVED CHANGE (VPAT 2.1.1 Keyboard): the clicked control is focusable now and keeps the focus, like a native button",
+    "expect_new": {"focus": "#control_e"}
   },
   {
     "name": "dtypes_click",
@@ -1199,7 +1287,9 @@
     "desc": "a data-type link augments the current search",
     "route": "#inquiry/formulae=Ag2O&props=crystal%20structure",
     "steps": [{"wait_for": "#dtypes li"}, {"click": "#dtypes li[data-term='phase diagram']", "after": 1500}],
-    "tags": ["results"]
+    "tags": ["results"],
+    "approved": "APPROVED CHANGE (VPAT 2.1.1 Keyboard): the clicked control is focusable now and keeps the focus, like a native button",
+    "expect_new": {"focus": "#dtypes > ul > li.dtypes_props.fct_props"}
   },
   {
     "name": "dtypes_class_replaces_class",
@@ -1207,7 +1297,9 @@
     "desc": "peer-reviewed / machine-learning / ab initio are mutually exclusive",
     "route": "#inquiry/elements=Ag-O&classes=machine-learning",
     "steps": [{"wait_for": "#dtypes li"}, {"click": "#dtypes li[data-term='peer-reviewed']", "after": 1500}],
-    "tags": ["results"]
+    "tags": ["results"],
+    "approved": "APPROVED CHANGE (VPAT 2.1.1 Keyboard): the clicked control is focusable now and keeps the focus, like a native button",
+    "expect_new": {"focus": "#dtypes > ul > li.dtypes_classes.fct_classes"}
   },
   {
     "name": "phases_show_entries_link",
@@ -1258,7 +1350,9 @@
     ],
     "probe": ["visible:#ctx_col", "visible:#visavis_col", "classes:#databrowser tr.tcell"],
     "pixels": "loose",
-    "tags": ["results", "context"]
+    "tags": ["results", "context"],
+    "approved": "APPROVED CHANGE (VPAT 2.1.1 Keyboard): the clicked control is focusable now and keeps the focus, like a native button",
+    "expect_new": {"focus": "#e__S311308 > td.cp > span.launch_v"}
   },
   {
     "name": "entry_ctx_close",
@@ -1270,7 +1364,9 @@
       {"click": "#ctx_col div.cross", "after": 800}
     ],
     "probe": ["visible:#ctx_col", "visible:#sim_col", "classes:#databrowser tr.tcell"],
-    "tags": ["results", "context"]
+    "tags": ["results", "context"],
+    "approved": "APPROVED CHANGE (VPAT 2.1.1 Keyboard): the clicked control is focusable now and keeps the focus, like a native button",
+    "expect_new": {"focus": "#e__S311308"}
   },
   {
     "name": "entry_ctx_second_row",
@@ -1283,7 +1379,9 @@
       {"click": "#databrowser tr.tcell", "nth": 2, "after": 2000}
     ],
     "probe": ["classes:#databrowser tr.tcell", "text:#entryno"],
-    "tags": ["results", "context"]
+    "tags": ["results", "context"],
+    "approved": "APPROVED CHANGE (VPAT 2.1.1 Keyboard): the clicked control is focusable now and keeps the focus, like a native button",
+    "expect_new": {"focus": "#e__S530743"}
   },
   {
     "name": "thumb_click_context",
@@ -1294,7 +1392,9 @@
       {"click": "#databrowser div.gallery_item", "nth": 1, "after": 2000}
     ],
     "probe": ["visible:#ctx_col", "classes:#databrowser div.gallery_item"],
-    "tags": ["results", "context"]
+    "tags": ["results", "context"],
+    "approved": "APPROVED CHANGE (VPAT 2.1.1 Keyboard): the clicked control is focusable now and keeps the focus, like a native button",
+    "expect_new": {"focus": "#e__S1832060"}
   },
   {
     "name": "infinite_scroll",
@@ -1316,7 +1416,9 @@
       {"click": "#dtypes_phid li", "after": 2000}
     ],
     "probe": ["classes:#dtypes_phid li"],
-    "tags": ["results", "phases"]
+    "tags": ["results", "phases"],
+    "approved": "APPROVED CHANGE (VPAT 2.1.1 Keyboard): the clicked control is focusable now and keeps the focus, like a native button",
+    "expect_new": {"focus": "#dtypes_phid > ul > li.dtypes_props.fct_props"}
   },
   {
     "name": "sim_col_click",
@@ -1546,7 +1648,9 @@
       "visible:#ctx_col"
     ],
     "tags": ["context", "sim"],
-    "expect": {"text:#sim_legend": {"contains": "Similar"}, "count:#sim_col > ul li": {"gt": 0}}
+    "expect": {"text:#sim_legend": {"contains": "Similar"}, "count:#sim_col > ul li": {"gt": 0}},
+    "approved": "APPROVED CHANGE (VPAT 2.1.1 Keyboard): the clicked control is focusable now and keeps the focus, like a native button",
+    "expect_new": {"focus": "#e__P601158-1"}
   },
   {
     "name": "sim_col_property_entry_thumbs",
@@ -1567,7 +1671,9 @@
       "visible:#own_phase"
     ],
     "tags": ["context", "sim", "thumbs"],
-    "expect": {"text:#sim_legend": {"contains": "Similar"}, "count:#sim_col > ul li": {"gt": 0}}
+    "expect": {"text:#sim_legend": {"contains": "Similar"}, "count:#sim_col > ul li": {"gt": 0}},
+    "approved": "APPROVED CHANGE (VPAT 2.1.1 Keyboard): the clicked control is focusable now and keeps the focus, like a native button",
+    "expect_new": {"focus": "#e__P601158-1"}
   },
   {
     "name": "esc_closes_entry_columns",
@@ -1581,7 +1687,10 @@
     ],
     "probe": ["visible:#ctx_col", "visible:#sim_col", "count:#databrowser .busy_entry"],
     "tags": ["context", "keyboard"],
-    "expect": {"visible:#ctx_col": false, "visible:#sim_col": false}
+    "expect": {"visible:#ctx_col": false, "visible:#sim_col": false},
+    "approved": "APPROVED CHANGE (VPAT 2.1.1 Keyboard): the clicked row keeps the focus; after ESC (keyboard modality) it shows its focus ring (0.12% of the pixels)",
+    "expect_new": {"focus": "#e__P601158-1"},
+    "pixel_threshold": 0.0015
   },
   {
     "name": "esc_closes_all_visible_panels",
@@ -1597,7 +1706,389 @@
     ],
     "probe": ["visible:#ctx_col", "visible:#sim_col", "visible:#numericbox", "nvisible:div.cross", "hash"],
     "tags": ["context", "keyboard", "numeric", "advsearch"],
-    "expect": {"visible:#ctx_col": false, "visible:#numericbox": false, "nvisible:div.cross": 0}
+    "expect": {"visible:#ctx_col": false, "visible:#numericbox": false, "nvisible:div.cross": 0},
+    "approved": "APPROVED CHANGE (VPAT 2.1.1 Keyboard): closing a dialog returns the focus to the control that opened it",
+    "expect_new": {"focus": "#advsearch_init_trigger"}
+  },
+  {
+    "name": "a11y_audit_start",
+    "desc": "start page: every control keyboard-reachable",
+    "route": "#start",
+    "tooltips": false,
+    "tags": ["a11y"],
+    "xfail": "APPROVED CHANGE (VPAT 2.1.1 Keyboard): the deployed GUI has mouse-only controls and dialogs that do not manage focus",
+    "expect_new": {"js:window.__a11y().mouse_only_total": 0},
+    "comment": "section: accessibility (VPAT 2.1.1 Keyboard, 1.4.4 Resize Text): window.__a11y() is the audit in parity/harness.js; every scenario is an approved change pinned with expect_new"
+  },
+  {
+    "name": "a11y_audit_results",
+    "desc": "results (table): every control keyboard-reachable",
+    "route": "#inquiry/formulae=TiO2&props=band%20gap",
+    "tooltips": false,
+    "steps": [{"wait_for": "#databrowser tr.tcell"}],
+    "tags": ["a11y"],
+    "xfail": "APPROVED CHANGE (VPAT 2.1.1 Keyboard): the deployed GUI has mouse-only controls and dialogs that do not manage focus",
+    "expect_new": {"js:window.__a11y().mouse_only_total": 0}
+  },
+  {
+    "name": "a11y_audit_entry_selected",
+    "desc": "entry selected: Entry and See also columns keyboard-reachable",
+    "route": "#inquiry/formulae=TiO2&props=band%20gap",
+    "tooltips": false,
+    "steps": [
+      {"wait_for": "#databrowser tr.tcell"},
+      {"click": "#databrowser tr.tcell[id*='P']", "after": 2500}
+    ],
+    "tags": ["a11y"],
+    "xfail": "APPROVED CHANGE (VPAT 2.1.1 Keyboard): the deployed GUI has mouse-only controls and dialogs that do not manage focus",
+    "expect_new": {"js:window.__a11y().mouse_only_total": 0, "js:window.__a11y().unreachable_total": 0}
+  },
+  {
+    "name": "a11y_audit_phases",
+    "desc": "phases (thumbnails): every control keyboard-reachable",
+    "route": "#inquiry_phases/elements=Ag-O&classes=oxide",
+    "tooltips": false,
+    "steps": [{"wait_for": "#databrowser div.gallery_item"}],
+    "tags": ["a11y"],
+    "xfail": "APPROVED CHANGE (VPAT 2.1.1 Keyboard): the deployed GUI has mouse-only controls and dialogs that do not manage focus",
+    "expect_new": {"js:window.__a11y().mouse_only_total": 0}
+  },
+  {
+    "name": "a11y_audit_advsearch",
+    "desc": "advanced search: focus inside, the page behind inert",
+    "route": "#start",
+    "tooltips": false,
+    "steps": [{"click": "#advsearch_init_trigger", "after": 1000}],
+    "tags": ["a11y"],
+    "xfail": "APPROVED CHANGE (VPAT 2.1.1 Keyboard): the deployed GUI has mouse-only controls and dialogs that do not manage focus",
+    "expect_new": {
+      "js:window.__a11y().mouse_only_total": 0,
+      "js:window.__a11y().focusable_outside_modal": 0,
+      "js:document.getElementById('advsbox').contains(document.activeElement)": true
+    }
+  },
+  {
+    "name": "a11y_audit_hierarchy",
+    "desc": "properties hierarchy: focus inside, the page behind inert",
+    "route": "#hierarchy",
+    "tooltips": false,
+    "tags": ["a11y"],
+    "xfail": "APPROVED CHANGE (VPAT 2.1.1 Keyboard): the deployed GUI has mouse-only controls and dialogs that do not manage focus",
+    "expect_new": {
+      "js:window.__a11y().mouse_only_total": 0,
+      "js:window.__a11y().focusable_outside_modal": 0,
+      "js:document.getElementById('hy_box').contains(document.activeElement)": true
+    }
+  },
+  {
+    "name": "a11y_audit_login",
+    "desc": "login dialog: focus inside, the page behind inert",
+    "route": "#modal/login",
+    "tooltips": false,
+    "tags": ["a11y"],
+    "xfail": "APPROVED CHANGE (VPAT 2.1.1 Keyboard): the deployed GUI has mouse-only controls and dialogs that do not manage focus",
+    "expect_new": {
+      "js:window.__a11y().mouse_only_total": 0,
+      "js:window.__a11y().focusable_outside_modal": 0,
+      "js:document.activeElement && (document.activeElement.id || document.activeElement.getAttribute('aria-label') || document.activeElement.className)": "login_email"
+    }
+  },
+  {
+    "name": "a11y_audit_polyhedra",
+    "desc": "polyhedra dialog: thumbnails keyboard-reachable, the page behind inert",
+    "route": "#polyhedra",
+    "tooltips": false,
+    "steps": [{"wait_for": "#all_polyhedra_content div.gallery_item"}],
+    "tags": ["a11y"],
+    "xfail": "APPROVED CHANGE (VPAT 2.1.1 Keyboard): the deployed GUI has mouse-only controls and dialogs that do not manage focus",
+    "expect_new": {"js:window.__a11y().mouse_only_total": 0, "js:window.__a11y().focusable_outside_modal": 0}
+  },
+  {
+    "name": "a11y_zoom150_start",
+    "desc": "150% zoom: the whole periodic table can be scrolled to",
+    "route": "#start",
+    "tooltips": false,
+    "viewport": [853, 533],
+    "tags": ["a11y"],
+    "xfail": "APPROVED CHANGE (VPAT 1.4.4 Resize Text): at 150% the deployed layout cuts content off",
+    "expect_new": {
+      "js:window.__a11y().unreachable_total": 0,
+      "js:document.getElementById('ptable_holder').getBoundingClientRect().left": {"ge": 0}
+    }
+  },
+  {
+    "name": "a11y_zoom150_results",
+    "desc": "150% zoom: grid, filters and side columns reachable",
+    "route": "#inquiry/formulae=TiO2&props=band%20gap",
+    "tooltips": false,
+    "viewport": [853, 533],
+    "steps": [{"wait_for": "#databrowser tr.tcell"}],
+    "tags": ["a11y"],
+    "xfail": "APPROVED CHANGE (VPAT 1.4.4 Resize Text): at 150% the deployed layout cuts content off",
+    "expect_new": {"js:window.__a11y().unreachable_total": 0}
+  },
+  {
+    "name": "a11y_zoom150_entry",
+    "desc": "150% zoom: Entry and See also reachable, close crosses visible",
+    "route": "#inquiry/formulae=TiO2&props=band%20gap",
+    "tooltips": false,
+    "viewport": [853, 533],
+    "steps": [
+      {"wait_for": "#databrowser tr.tcell"},
+      {"click": "#databrowser tr.tcell[id*='P']", "after": 2500}
+    ],
+    "tags": ["a11y"],
+    "xfail": "APPROVED CHANGE (VPAT 1.4.4 Resize Text): at 150% the deployed layout cuts content off",
+    "expect_new": {"js:window.__a11y().unreachable_total": 0}
+  },
+  {
+    "name": "a11y_zoom150_advsearch",
+    "desc": "150% zoom: the advanced search box fits or scrolls",
+    "route": "#start",
+    "tooltips": false,
+    "viewport": [853, 533],
+    "steps": [{"click": "#advsearch_init_trigger", "after": 1000}],
+    "tags": ["a11y"],
+    "xfail": "APPROVED CHANGE (VPAT 1.4.4 Resize Text): at 150% the deployed layout cuts content off",
+    "expect_new": {"js:window.__a11y().unreachable_total": 0, "js:window.__a11y().focusable_outside_modal": 0}
+  },
+  {
+    "name": "a11y_zoom150_hierarchy",
+    "desc": "150% zoom: the properties hierarchy dialog stays in the window, its items are not cut",
+    "route": "#hierarchy",
+    "viewport": [853, 533],
+    "tooltips": false,
+    "tags": ["a11y"],
+    "xfail": "APPROVED CHANGE (VPAT 1.4.4 Resize Text): at 150% the deployed layout cuts content off",
+    "expect_new": {"js:window.__a11y().unreachable_total": 0}
+  },
+  {
+    "name": "a11y_zoom200_start",
+    "desc": "200% zoom (WCAG 1.4.4): the whole periodic table can be scrolled to",
+    "route": "#start",
+    "tooltips": false,
+    "viewport": [640, 400],
+    "tags": ["a11y"],
+    "xfail": "APPROVED CHANGE (VPAT 1.4.4 Resize Text): at 200% the deployed layout cuts content off",
+    "expect_new": {
+      "js:window.__a11y().unreachable_total": 0,
+      "js:document.getElementById('ptable_holder').getBoundingClientRect().left": {"ge": 0}
+    }
+  },
+  {
+    "name": "a11y_zoom200_results",
+    "desc": "200% zoom (WCAG 1.4.4): grid, filters and side columns reachable",
+    "route": "#inquiry/formulae=TiO2&props=band%20gap",
+    "tooltips": false,
+    "viewport": [640, 400],
+    "steps": [{"wait_for": "#databrowser tr.tcell"}],
+    "tags": ["a11y"],
+    "xfail": "APPROVED CHANGE (VPAT 1.4.4 Resize Text): at 200% the deployed layout cuts content off",
+    "expect_new": {"js:window.__a11y().unreachable_total": 0}
+  },
+  {
+    "name": "a11y_zoom200_entry",
+    "desc": "200% zoom (WCAG 1.4.4): Entry and See also reachable, close crosses visible",
+    "route": "#inquiry/formulae=TiO2&props=band%20gap",
+    "tooltips": false,
+    "viewport": [640, 400],
+    "steps": [
+      {"wait_for": "#databrowser tr.tcell"},
+      {"click": "#databrowser tr.tcell[id*='P']", "after": 2500}
+    ],
+    "tags": ["a11y"],
+    "xfail": "APPROVED CHANGE (VPAT 1.4.4 Resize Text): at 200% the deployed layout cuts content off",
+    "expect_new": {"js:window.__a11y().unreachable_total": 0}
+  },
+  {
+    "name": "a11y_zoom200_advsearch",
+    "desc": "200% zoom (WCAG 1.4.4): the advanced search box fits or scrolls",
+    "route": "#start",
+    "tooltips": false,
+    "viewport": [640, 400],
+    "steps": [{"click": "#advsearch_init_trigger", "after": 1000}],
+    "tags": ["a11y"],
+    "xfail": "APPROVED CHANGE (VPAT 1.4.4 Resize Text): at 200% the deployed layout cuts content off",
+    "expect_new": {"js:window.__a11y().unreachable_total": 0, "js:window.__a11y().focusable_outside_modal": 0}
+  },
+  {
+    "name": "a11y_zoom200_hierarchy",
+    "desc": "200% zoom (WCAG 1.4.4): the properties hierarchy dialog stays in the window, its items are not cut",
+    "route": "#hierarchy",
+    "viewport": [640, 400],
+    "tooltips": false,
+    "tags": ["a11y"],
+    "xfail": "APPROVED CHANGE (VPAT 1.4.4 Resize Text): at 200% the deployed layout cuts content off",
+    "expect_new": {"js:window.__a11y().unreachable_total": 0}
+  },
+  {
+    "name": "a11y_view_control_enter",
+    "desc": "a VIEW control is operated with Enter",
+    "route": "#inquiry/formulae=TiO2&props=band%20gap",
+    "tooltips": false,
+    "steps": [
+      {"wait_for": "#databrowser tr.tcell"},
+      {"focus": "#control_b"},
+      {"key": "Enter", "after": 1500}
+    ],
+    "tags": ["a11y"],
+    "xfail": "APPROVED CHANGE (VPAT 2.1.1 Keyboard): the deployed GUI has mouse-only controls and dialogs that do not manage focus",
+    "expect_new": {
+      "hash": {"matches": "^#inquiry_phases/"},
+      "js:document.getElementById('control_b').getAttribute('role')": "radio"
+    }
+  },
+  {
+    "name": "a11y_ptable_arrows",
+    "desc": "periodic table: ArrowDown from H reaches Li, Enter selects it",
+    "route": "#start",
+    "tooltips": false,
+    "steps": [
+      {"focus": "#ptable_area li[data-pos='1']"},
+      {"key": "ArrowDown"},
+      {"key": "Enter", "after": 1500}
+    ],
+    "tags": ["a11y"],
+    "xfail": "APPROVED CHANGE (VPAT 2.1.1 Keyboard): the deployed GUI has mouse-only controls and dialogs that do not manage focus",
+    "expect_new": {
+      "js:document.activeElement && (document.activeElement.id || document.activeElement.getAttribute('aria-label') || document.activeElement.className)": {"contains": "Lithium"},
+      "js:document.activeElement.getAttribute('aria-pressed')": "true",
+      "js:document.querySelectorAll('#ptable_area li[tabindex=\"0\"]').length": 1
+    }
+  },
+  {
+    "name": "a11y_dialog_round_trip",
+    "desc": "advanced search by keyboard: focus moves in, stays in on Tab, ESC returns it",
+    "route": "#start",
+    "tooltips": false,
+    "steps": [
+      {"focus": "#advsearch_init_trigger"},
+      {"key": "Enter", "after": 1000},
+      {"key": "Tab"},
+      {"key": "Tab"},
+      {"key": "Tab"},
+      {"key": "Tab"},
+      {"key": "Tab"},
+      {"key": "Tab"},
+      {"key": "Tab"},
+      {"key": "Tab"},
+      {"eval": "window.__in_dialog = document.getElementById('advsbox').contains(document.activeElement)"},
+      {"key": "Escape", "after": 1000}
+    ],
+    "tags": ["a11y"],
+    "xfail": "APPROVED CHANGE (VPAT 2.1.1 Keyboard): the deployed GUI has mouse-only controls and dialogs that do not manage focus",
+    "expect_new": {
+      "js:window.__in_dialog": true,
+      "js:document.activeElement && (document.activeElement.id || document.activeElement.getAttribute('aria-label') || document.activeElement.className)": "advsearch_init_trigger",
+      "visible:#advsbox": false
+    }
+  },
+  {
+    "name": "a11y_advsearch_tabs",
+    "desc": "advanced search tabs: arrows move between tabs, Enter opens one",
+    "route": "#start",
+    "tooltips": false,
+    "steps": [
+      {"click": "#advsearch_init_trigger", "after": 1000},
+      {"focus": "#advstab_options li[rev=advstab_cry]"},
+      {"key": "ArrowLeft"},
+      {"key": "Enter", "after": 800}
+    ],
+    "tags": ["a11y"],
+    "xfail": "APPROVED CHANGE (VPAT 2.1.1 Keyboard): the deployed GUI has mouse-only controls and dialogs that do not manage focus",
+    "expect_new": {
+      "js:document.querySelector('#advstab_options li[rev=advstab_bib]').getAttribute('aria-selected')": "true",
+      "visible:#advstab_bib": true,
+      "js:document.activeElement && (document.activeElement.id || document.activeElement.getAttribute('aria-label') || document.activeElement.className)": {"contains": "working"}
+    }
+  },
+  {
+    "name": "a11y_results_row_context",
+    "desc": "results: arrows move between rows, Enter opens the entry and focuses it, ESC returns to the row",
+    "route": "#inquiry/formulae=TiO2&props=band%20gap",
+    "tooltips": false,
+    "steps": [
+      {"wait_for": "#databrowser tr.tcell"},
+      {"focus": "#databrowser tr.tcell[tabindex='0']"},
+      {"key": "ArrowDown"},
+      {"key": "Enter", "after": 2500},
+      {"eval": "window.__ctx_focus = !!document.activeElement.closest('#ctx_col')"},
+      {"key": "Escape", "after": 1000}
+    ],
+    "tags": ["a11y"],
+    "xfail": "APPROVED CHANGE (VPAT 2.1.1 Keyboard): the deployed GUI has mouse-only controls and dialogs that do not manage focus",
+    "expect_new": {
+      "js:window.__ctx_focus": true,
+      "visible:#ctx_col": false,
+      "js:document.activeElement.matches('#databrowser tr.tcell')": true,
+      "js:Array.prototype.indexOf.call(document.querySelectorAll('#databrowser tr.tcell'), document.activeElement)": 1
+    }
+  },
+  {
+    "name": "a11y_hierarchy_expand",
+    "desc": "properties hierarchy: an expand control works with Enter and reports its state",
+    "route": "#hierarchy",
+    "tooltips": false,
+    "steps": [{"focus": "#hy_box span[class^='hy']"}, {"key": "Enter", "after": 800}],
+    "tags": ["a11y"],
+    "xfail": "APPROVED CHANGE (VPAT 2.1.1 Keyboard): the deployed GUI has mouse-only controls and dialogs that do not manage focus",
+    "expect_new": {
+      "js:document.activeElement.getAttribute('aria-expanded')": "true",
+      "js:document.activeElement && (document.activeElement.id || document.activeElement.getAttribute('aria-label') || document.activeElement.className)": {"matches": "^hy"}
+    }
+  },
+  {
+    "name": "a11y_numeric_open_close",
+    "desc": "advanced search: a numeric control opens a slider by keyboard; its close cross closes it and focus returns to the control",
+    "route": "#start",
+    "tooltips": false,
+    "steps": [
+      {"click": "#advsearch_init_trigger", "after": 1000},
+      {"focus": "#advstab_cry strong.numeric[rel=alat]"},
+      {"key": "Enter", "after": 1000},
+      {"eval": "window.__slider = !!document.querySelector('#numericbox .noUi-handle[aria-label]')"},
+      {"focus": "#close_numericbox"},
+      {"key": "Enter", "after": 800}
+    ],
+    "tags": ["a11y"],
+    "xfail": "APPROVED CHANGE (VPAT 2.1.1 Keyboard): the deployed GUI has mouse-only controls and dialogs that do not manage focus",
+    "expect_new": {
+      "js:window.__slider": true,
+      "visible:#numericbox": false,
+      "js:document.activeElement.matches('strong.numeric[rel=alat]')": true
+    }
+  },
+  {
+    "name": "a11y_userbox_enter",
+    "desc": "the upper-right menu opens the login dialog by keyboard; ESC returns to it",
+    "route": "#start",
+    "tooltips": false,
+    "steps": [
+      {"focus": "#userbox"},
+      {"key": "Enter", "after": 1000},
+      {"eval": "window.__login = document.activeElement.id"},
+      {"key": "Escape", "after": 1000}
+    ],
+    "tags": ["a11y"],
+    "xfail": "APPROVED CHANGE (VPAT 2.1.1 Keyboard): the deployed GUI has mouse-only controls and dialogs that do not manage focus",
+    "expect_new": {
+      "js:window.__login": "login_email",
+      "js:document.activeElement && (document.activeElement.id || document.activeElement.getAttribute('aria-label') || document.activeElement.className)": "userbox"
+    }
+  },
+  {
+    "name": "a11y_skip_to_results",
+    "desc": "the skip control moves focus into the results",
+    "route": "#inquiry/formulae=TiO2&props=band%20gap",
+    "tooltips": false,
+    "steps": [
+      {"wait_for": "#databrowser tr.tcell"},
+      {"focus": "#a11y_skip"},
+      {"key": "Enter", "after": 500}
+    ],
+    "tags": ["a11y"],
+    "xfail": "APPROVED CHANGE (VPAT 2.1.1 Keyboard): the deployed GUI has mouse-only controls and dialogs that do not manage focus",
+    "expect_new": {"js:!!document.activeElement.closest('#databrowser')": true}
   },
   {
     "comment": [
